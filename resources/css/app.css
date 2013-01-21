@@ -1,0 +1,46 @@
+body{
+  background-repeat:repeat;
+  background-color:rgb(251,251,251);
+}
+
+.searchBox{
+  padding:10px 20px 10px 30px;
+  border-bottom:1px rgba(240,240,240,1) solid;
+  background-color:rgb(251,251,251);
+}
+
+.borBox{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.centerOnPage{
+  position:absolute;
+  left:50%;
+  width:auto;
+}
+
+.input-append button {
+	border-radius: 1px !important;
+}
+
+/*.input-append {
+	width: auto;
+}
+*/
+.input-append button i{
+    margin: 3px 0;
+}
+
+.input-append input.span4fix{
+    border-radius:1px;
+    display:block;
+    width:290px;
+}
+
+.input-append > li {
+	float: left;
+}

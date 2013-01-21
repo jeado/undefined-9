@@ -1,0 +1,7 @@
+{
+  "name": "userMnge-demo",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.0"
+  }
+}
