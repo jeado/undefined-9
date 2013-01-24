@@ -1,6 +1,6 @@
 function UserService($http) {
 
-	this.getUserList = function(param, callback, error) {
+	this.getUsers = function(param, callback, error) {
 		$http.get("/json/users.json").then(function(response) {
 			var data = response.data;
 			if(callback) {
@@ -23,8 +23,6 @@ function UserService($http) {
 	};
 }
 
-var DemoApp = angular.module('DemoApp', []);
-
 DemoApp.service('UserService', UserService);
 
 DemoApp.factory('UserServiceF', function($http) {
@@ -41,7 +39,7 @@ DemoApp.provider('UserServiceP', function() {
 
 	function UserService($http) {
 
-		this.getUserList = function(param, callback, error) {
+		this.getUsers = function(param, callback, error) {
 			$http.get(contextRoot+"json/users.json").then(function(response) {
 				var data = response.data;
 				if(callback) {

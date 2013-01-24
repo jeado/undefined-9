@@ -16,8 +16,8 @@ files = [
   'lib/angular/angular.js',
   'lib/angular/angular-resource.js',
   'lib/angular/angular-mocks.js',
-  'src/*.js',
-  'test/*.js'
+  'src/**/*.js',
+  'test/E2E/*.js'
 ];
 // list of files to exclude
 exclude = [
@@ -26,7 +26,7 @@ exclude = [
 
 proxies = {
   '/': 'http://localhost:8000/',
-  '/lib': 'http://localhost:8000/lib',
+  '/libs': 'http://localhost:8000/libs',
   '/build' : 'http://localhost:8000/build',
   '/resources':'http://localhost:8000/resources',
   '/src':'http://localhost:8000/src'

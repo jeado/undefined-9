@@ -10,11 +10,11 @@ describe("UserService", function() {
     service = UserService;
   }));
 
-  describe("getUserList", function() {
+  describe("getUsers", function() {
     it("사용자 정보를 가지고 온다.", function() {
       $httpBackend.expectGET('/json/users.json').respond([{name: 'name1'}, {'name': 'name2'}]);
 
-      service.getUserList({},function(data) {
+      service.getUsers({},function(data) {
         expect(data.length).toBeGreaterThan(0);
       });
 
@@ -35,11 +35,11 @@ describe("UserServiceF", function() {
     userServiceF = UserServiceF;
   }));
 
-  describe("getUserList", function() {
+  describe("getUsers", function() {
     it("사용자 정보를 가지고 온다.", function() {
       $httpBackend.expectGET('/json/users.json').respond([{name: 'name1'}, {'name': 'name2'}]);
 
-      userServiceF.getUserList({},function(data) {
+      userServiceF.getUsers({},function(data) {
         expect(data.length).toBeGreaterThan(0);
       });
 
@@ -63,12 +63,12 @@ describe("UserServiceP", function() {
     userServiceP = UserServiceP;
   }));
 
-  describe("getUserList", function() {
+  describe("getUsers", function() {
 
     it("사용자 정보를 가지고 온다.", function() {
       $httpBackend.expectGET('/test/json/users.json').respond([{name: 'name1'}, {'name': 'name2'}]);
 
-      userServiceP.getUserList({},function(data) {
+      userServiceP.getUsers({},function(data) {
         expect(data.length).toBeGreaterThan(0);
       });
 

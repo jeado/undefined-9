@@ -18,13 +18,24 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      options: {
-        wrap : 'UserMnge',
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build : {
+      compress : {
+        options: {
+          wrap : 'UserMnge',
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        },
         files: {
           'build/<%= pkg.name %>.min.js' : ['src/**/*.js']
+        }
+      },
+      concat : {
+        options: {
+          wrap : 'UserMnge',
+          mangle: false,
+          beautify: true,
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        },
+        files: {
+          'build/<%= pkg.name %>.js' : ['src/**/*.js']
         }
       }
     },
@@ -36,6 +47,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['uglify']);
   grunt.registerTask('webserver', ['connect:devserver']);

@@ -1,0 +1,22 @@
+[
+	{
+		"name" : "고재도",
+		"email" : "haibane84@gmail.com",
+		"regDate" : "2013-02-17"
+	},
+	{
+		"name" : "백승현",
+		"email" : "1234@gmail.com",
+		"regDate" : "2012-12-20"
+	},
+	{
+		"name" : "박준태",
+		"email" : "5678@gmail.com",
+		"regDate" : "2011-11-03"
+	},
+	{
+		"name" : "김태원",
+		"email" : "9012@gmail.com",
+		"regDate" : "2012-07-22"
+	}
+]

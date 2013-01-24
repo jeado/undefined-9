@@ -44,3 +44,20 @@ body{
 .input-append > li {
 	float: left;
 }
+
+.table thead th {
+  text-align: center;
+}
+
+.table tbody td {
+  padding: 
+}
+
+.table tbody input {
+  width: 98%;
+  margin-bottom: 0;
+}
+
+td.center {
+  text-align: center;
+}
