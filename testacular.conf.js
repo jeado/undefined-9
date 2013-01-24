@@ -17,7 +17,7 @@ files = [
   'libs/angular/angular-resource.js',
   'libs/angular/angular-mocks.js',
   'src/**/*.js',
-  'test/**/*.js'
+  'test/unit/*.js'
 ];
 
 // list of files to exclude

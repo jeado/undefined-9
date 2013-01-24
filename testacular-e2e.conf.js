@@ -9,13 +9,15 @@
 // base path, that will be used to resolve files and exclude
 // basePath = '../..';
 
+var localhost = "192.168.0.23";
+
 // list of files / patterns to load in the browser
 files = [
   ANGULAR_SCENARIO,
   ANGULAR_SCENARIO_ADAPTER,
-  'lib/angular/angular.js',
-  'lib/angular/angular-resource.js',
-  'lib/angular/angular-mocks.js',
+  'libs/angular/angular.js',
+  'libs/angular/angular-resource.js',
+  'libs/angular/angular-mocks.js',
   'src/**/*.js',
   'test/E2E/*.js'
 ];
@@ -25,11 +27,11 @@ exclude = [
 ];
 
 proxies = {
-  '/': 'http://localhost:8000/',
-  '/libs': 'http://localhost:8000/libs',
-  '/build' : 'http://localhost:8000/build',
-  '/resources':'http://localhost:8000/resources',
-  '/src':'http://localhost:8000/src'
+  '/': 'http://'+localhost+':8000/',
+  '/libs': 'http://'+localhost+':8000/libs',
+  '/build' : 'http://'+localhost+':8000/build',
+  '/resources':'http://'+localhost+':8000/resources',
+  '/src':'http://'+localhost+':8000/src'
 };
 
 // use dots reporter, as travis terminal does not support escaping sequences
@@ -72,11 +74,13 @@ autoWatch = true;
 // - PhantomJS
 // - IE (only Windows)
 // CLI --browsers Chrome,Firefox,Safari
-browsers = ['Chrome'];
+// browsers = ['Chrome'];
+// browsers = ['Chrome','/workspace/jcf-ui-framework/ie9.sh'];
+browsers = ['/workspace/jcf-ui-framework/ie9.sh'];
 
 // If browser does not capture in given timeout [ms], kill it
 // CLI --capture-timeout 5000
-captureTimeout = 5000;
+captureTimeout = 500000;
 
 // Auto run tests on start (when browsers are captured) and exit
 // CLI --single-run --no-single-run
